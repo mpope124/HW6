@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css"/>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Carrois+Gothic+SC&display=swap" rel="stylesheet">
+    <title>List your favorite music</title>
+</head>
+<body>
+    <!-- ======================================================================================== -->
+    
+    <div data-role="page" id="home">
+
+        <!-- header --> 
+        <div id="headerHome" data-role="header" data-theme='b'>
+            <h2>View your favorite music!</h2>
+        
+            <div id="navbarHome" data-role="navbar" data-theme='b'>
+                <ul>
+                <li><a href="#song">Write Musics</a></li>
+                <li><a href="#displayMusic">Display Music</a></li>
+                </ul>
+            </div><!-- /navbar -->
+        </div>  
+        
+        <!-- content -->
+        <div id="homePageContent" data-role="content" data-theme='e'>
+            <!-- Real application function code -->
+            <h1>Store and Share Your Favorite Music</h1>
+        <p>Use this page to put your favorite music as well as sharing with your friends to have them put their favorite music</p>
+        <img src="Lamb-Of-God-5.jpg"></div>
+    </div>
+          <!-- notes footer --> 
+          <div data-role="footer" data-theme='b'>
+            <h3>Copyright 2023 by Michael Pope and Stephen Orendain</h3>
+        </div>
+
+    </div>
+   <!-- ======================================================================================== -->
+
+
+   <!-- ======================================================================================== -->
+    <div data-role="page" id="song">
+        
+        <!-- =================================== -->
+        <!-- header --> 
+        <div data-role="header" data-theme='b'>
+            <h2>Write to us what you like to listen to!</h2>
+
+            <div data-role="navbar" data-theme='b'>
+                <ul>
+                 <li><a href="#home">Home Page</a></li>
+                 <li><a href="#displayMusic">Display Music</a></li>
+                </ul>
+            </div><!-- /navbar -->
+
+        </div>
+        <!-- =================================== -->
+
+        <!-- =================================== -->
+        <!-- content -->
+        <div data-role="content" data-theme='e' id="background1">
+            <p id="description1">Write to us some music of your choice. It can be anything. The music you submit will be stored.</p>
+            <p>Favorite Song: </p>
+            <input type="text" id="musics" placeholder="Enter your Favorite Song Here!">
+            <p>Genre: </p>
+            <input type="text" id="genre" placeholder="Enter the Genre Here!">
+            <br>
+            <button type="button" id="storeMusic" onclick="Storedmusic()">Store Musics</button>
+
+            <section id="displays">
+                <p>Do you have any subgeneres you prefer? </p>
+                <input type="text" id="subGenre" placeholder="Your Subgenre">
+                <p>Do you have any favorite artists of music in mind?</p>
+                <input type="text" id="author" placeholder="Your choice of music artist">
+                <br>
+                <button type="button" id="storeSubgenre" onclick="Subgenre()">Store Subgenre</button>
+                <label id="end"></label>
+            </section>
+        </div>
+        <!-- =================================== -->
+
+
+        <!-- =================================== -->
+        <!-- notes footer --> 
+        <div data-role="footer" data-theme='b'>
+            <h3 id="musicNotes">Copyright 2023 by Michael Pope and Stephen Orendain</h3>
+        </div>
+        
+        <!-- =================================== -->
+    </div>
+     <!-- ======================================================================================== -->
+
+
+    
+      <!-- ======================================================================================== -->
+    <div data-role="page" id="displayMusic">
+        
+          <!-- =================================== -->
+        <!-- header --> 
+        <div data-role="header" data-theme='b'>
+            <h2>Display your Music</h2>
+       
+
+            <div data-role="navbar" data-theme='b'>
+                <ul>
+                <li><a href="#home">Home Page</a></li>
+                <li><a href="#song">Write Musics</a></li>
+                </ul>
+            </div><!-- /navbar -->
+        </div>
+           <!-- =================================== -->
+
+          <!-- =================================== -->
+        <!-- content -->
+        <div id="displayPageContent" data-role="content" data-theme='e'>
+          <h1> Below you can list out your music!</h1>
+          <p>Show your friends your music taste and allow them to show you theirs.</p>
+          <button id="listMusic">Display your favorite songs and genres</button>
+          <div id="musicList"></div>
+          <br />
+          <h1>Below you can list out your favorite sub-genres and artists</h1>
+          <p>Learning other subgenres allows for others to learn about peoples backgrounds and allows for others to learn how people express themselves in unique ways</p>
+          <button id="listSubGenre">Display your favorite sub-genres</button>
+          <div id="subGenreList"></div>
+          <br />
+          <h3>Check out this photo!</h3>
+          <img id='letLive' src="Letlive-Gattine3.png"></img>
+          <br />
+          <p>This is singer Jason Butler from the band LetLive jumping into the crowd to crowdsurf</p>
+          <br />
+          <p>Tell us your favorite band or stories at musicinput@gmail.com</p>
+        </div>
+           <!-- =================================== -->
+
+           <!-- =================================== -->
+        <!-- notes footer --> 
+        <div data-role="footer" data-theme='b'>
+            <h3>Copyright 2023 by Michael Pope and Stephen Orendain</h3>
+        </div>
+        <!-- =================================== -->
+
+    </div>
+     <!-- ======================================================================================== -->
+    
+     <script src="main.js"></script>
+</body>
+</html>

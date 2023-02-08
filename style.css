@@ -1,0 +1,51 @@
+body {
+    margin: 50px;
+    background-color: rgb(38, 161, 0);
+    font-family: 'Carrois Gothic SC', sans-serif;
+
+}
+.Center {
+    background-color: antiquewhite;
+}
+#description1 {
+    color:white;
+    text-align: center;
+}
+
+#background1 {
+    color:white;
+    background-image: url(pexels-photo-4296349.jpeg); 
+    font-size: 150%;
+}
+
+#storeMusic {
+    background-color: black;
+    font-size: 100%;
+    color:white;
+    border-color: black;
+    border-radius: 80%;
+    border-width: thick;
+}
+
+#displays {
+    display: none;
+    font-size: 80%;
+}
+
+#end {
+    text-align: center;
+}
+#homePageContent {
+    text-align: center;
+    color:white;
+    background-image: url(pexels-photo-4296349.jpeg);
+}
+#displayPageContent {
+    text-align: center;
+    color:white;
+    background-image: url(pexels-photo-4296349.jpeg);  
+}
+
+#letLive {
+    max-width: 50%;
+}
