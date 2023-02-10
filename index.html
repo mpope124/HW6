@@ -69,11 +69,32 @@
         <!-- content -->
         <div data-role="content" data-theme='e' id="background1">
             <p id="description1">Write to us some music of your choice. It can be anything. The music you submit will be stored.</p>
-            <p>Favorite Song: </p>
-            <input type="text" id="musics" placeholder="Enter your Favorite Song Here!">
-            <p>Genre: </p>
-            <input type="text" id="genre" placeholder="Enter the Genre Here!">
-            <br>
+            <p>Enter a Song: </p>
+            <input type="text" id="newSong" placeholder="Enter Your Song Here!"></input>
+            <p>Enter The Album: </p>
+            <input type="text" id="album" placeholder="Enter The Album Here!"></input>
+            <p>Enter The Artist: </p>
+            <input type="text" id="artist" placeholder="Enter The Artist Here!"></input>
+            <p>Enter The Year It Was Released: </p>
+            <input type="text" id="yearReleased" placeholder="Enter The Year Here!"></input>
+            <p>Select a Genre: </p>
+            <select name="selectGenre" id="genre" placeholder="Select Your Genre">
+                <option value=""></option>
+                <option value="Blues">Blues</option>
+                <option value="Country">Country</option>
+                <option value="Electronic">Electronic</option>
+                <option value="HipHop">HipHop</option>
+                <option value="Jazz">Jazz</option>
+                <option value="Pop">Pop</option>
+                <option value="R&B">R&B</option>
+                <option value="Rock">Rock</option>
+                <option value="Metal">Metal</option>
+                <option value="Punk">Punk</option>
+                <option value="Latin">Latin</option>
+              </select>
+            <p>Share a YouTube Link To The Song: </p>
+            <input type="text" id="link" placeholder="Copy and Paste Link Here"></input>
+            <br />
             <button type="button" id="storeMusic" onclick="Storedmusic()">Store Musics</button>
 
             <section id="displays">
