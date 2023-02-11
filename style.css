@@ -27,11 +27,6 @@ body {
     border-width: thick;
 }
 
-#displays {
-    display: none;
-    font-size: 80%;
-}
-
 #end {
     text-align: center;
 }

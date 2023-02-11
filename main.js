@@ -10,13 +10,6 @@ let Music = function (pSong, pAlbum, pArtist, pYear, pGenre, pLink){
 
  musicArr = []; // music and genre get stored here
 
- let Subgenres = function(pSubgenre, pAuthor){
-    this.sub = pSubgenre;
-    this.authors = pAuthor;
- } // constructor for creating sub genres
- 
- subGenre = []; // Sub genres get stored here
-
 
  function Storedmusic() {
     let song = document.getElementById('newSong').value;
@@ -37,17 +30,6 @@ let Music = function (pSong, pAlbum, pArtist, pYear, pGenre, pLink){
     displays.style.display = "block"; // Opens up the section of the subgenre
     console.log(musicArr);
  } // Gets the value of music and the genre, pushes it into the musicArr and clears the textboxes
-
- function Subgenre() {
-    let subMusic = document.getElementById("subGenre").value;
-    let author = document.getElementById("author").value;
-    subGenre.push(new Subgenres(subMusic, author))
-
-    document.getElementById("subGenre").value = " ";
-    document.getElementById("author").value = " ";
-    document.getElementById("end").innerHTML = "Thank you for Listing Music";
-    console.log(subGenre)
- } // Gets the value of the sub genre and author, and pushes it into the subGenre array and clears the textboxes.
  
  document.getElementById('listMusic').addEventListener('click',displayMusic);
 
@@ -61,7 +43,9 @@ let Music = function (pSong, pAlbum, pArtist, pYear, pGenre, pLink){
       
   }
 
-  document.getElementById('listSubGenre').addEventListener('click',displaySubGenre)
+  // The old subgenre event that lists the subgenres inputted
+
+/*   document.getElementById('listSubGenre').addEventListener('click',displaySubGenre)
 
   function displaySubGenre() {
    document.getElementById('subGenreList').innerText = '';
@@ -71,4 +55,4 @@ let Music = function (pSong, pAlbum, pArtist, pYear, pGenre, pLink){
        document.getElementById('subGenreList').append(list);
    }
    
-}
+} */
