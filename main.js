@@ -29,19 +29,26 @@ let Music = function (pSong, pAlbum, pArtist, pYear, pGenre, pLink){
     document.getElementById("musicNotes").innerHTML = "Music has been Stored: Add Another One?";
     displays.style.display = "block"; // Opens up the section of the subgenre
     console.log(musicArr);
- } // Gets the value of music and the genre, pushes it into the musicArr and clears the textboxes
+ } // Gets the value of music, genre, and other information and pushes it into the musicArr and clears the textboxes
  
- document.getElementById('listMusic').addEventListener('click',displayMusic);
+document.addEventListener("DOMContentLoaded", function () {
 
- function displayMusic() {
-      document.getElementById('musicList').innerText = '';
-      for (i = 0; i < musicArr.length; i++) {
-          let list = document.createElement('li');
-          list.innerText = 'You entered in the song ' + musicArr[i].song + ' and the Artist is ' + musicArr[i].artist + ' and the genre is ' + musicArr[i].genre
-          document.getElementById('musicList').append(list);
-      }
-      
-  }
+  document.getElementById("listMusic1").addEventListener("click", function () {
+
+    document.location.href = "index.html#hiddenPage";
+
+  })
+
+});
+
+
+
+
+
+
+
+
+
 
   // The old subgenre event that lists the subgenres inputted
 
