@@ -1,4 +1,5 @@
 let Music = function (pSong, pAlbum, pArtist, pYear, pGenre, pLink){
+   this.ID = Math.random().toString(16).slice(5)
    this.song = pSong;
    this.album = pAlbum
    this.artist = pArtist;
@@ -10,6 +11,9 @@ let Music = function (pSong, pAlbum, pArtist, pYear, pGenre, pLink){
 
  musicArr = []; // music and genre get stored here
 
+musicArr.push(new Music("Umbrella", "Good Girls Gone Bad", "Rihanna", "2008", "Pop", "https://www.youtube.com/watch?v=CvBfHwUxHIk"));
+musicArr.push(new Music("Single Ladies", "I AM...SASHA FIERCE", "Beyonce", "2008", "Pop", "https://www.youtube.com/watch?v=4m1EFMoRFvY"));
+musicArr.push(new Music("Rehab","Back To Black", "Amy Winehouse", "2006", "Pop", "https://www.youtube.com/watch?v=KUmZp8pR1uc"));
 
  function Storedmusic() {
     let song = document.getElementById('newSong').value;
@@ -27,7 +31,7 @@ let Music = function (pSong, pAlbum, pArtist, pYear, pGenre, pLink){
     document.getElementById('genre').value = " ";
     document.getAnimations('link').value = " ";
     document.getElementById("musicNotes").innerHTML = "Music has been Stored: Add Another One?";
-    displays.style.display = "block"; // Opens up the section of the subgenre
+    // displays.style.display = "block"; // Opens up the section of the subgenre
     console.log(musicArr);
  } // Gets the value of music, genre, and other information and pushes it into the musicArr and clears the textboxes
  
@@ -41,6 +45,26 @@ document.addEventListener("DOMContentLoaded", function () {
 
 });
 
+$(document).on("pagebeforeshow", "#displayMusic", function (event) {  
+  showMusic();
+});
+
+document.getElementById("listMusic").addEventListener('click',showMusic);
+function showMusic() {
+  
+  document.getElementById('musicList').innerText = '';
+
+      for (i = 0; i < musicArr.length; i++) {
+          let list = document.createElement('li');
+          list.innerText = musicArr[i].song + ' -- ' + musicArr[i].artist
+          document.getElementById('musicList').append(list);
+      }
+}
+
+document.getElementById('clearMusic').addEventListener('click',clearMusic);
+function clearMusic() {
+  document.getElementById('musicList').innerText = '';
+}
 
 
 
@@ -50,16 +74,4 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-  // The old subgenre event that lists the subgenres inputted
-
-/*   document.getElementById('listSubGenre').addEventListener('click',displaySubGenre)
-
-  function displaySubGenre() {
-   document.getElementById('subGenreList').innerText = '';
-   for (i = 0; i < subGenre.length; i++) {
-       let list = document.createElement('li');
-       list.innerText = 'You entered in the genre ' + subGenre[i].sub + ' and the artist/artists are ' + subGenre[i].authors
-       document.getElementById('subGenreList').append(list);
-   }
-   
-} */
+ 
