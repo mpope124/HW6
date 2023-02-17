@@ -37,11 +37,11 @@ musicArr.push(new Music("Rehab","Back To Black", "Amy Winehouse", "2006", "Pop",
  
 document.addEventListener("DOMContentLoaded", function () {
 
-  document.getElementById("listMusic1").addEventListener("click", function () {
+  // document.getElementById("listMusic1").addEventListener("click", function () {
 
-    document.location.href = "index.html#hiddenPage";
+  //   document.location.href = "index.html#hiddenPage";
 
-  })
+  // })
 
 });
 
@@ -53,20 +53,57 @@ document.getElementById("listMusic").addEventListener('click',showMusic);
 function showMusic() {
   
   document.getElementById('musicList').innerText = '';
-
-      for (i = 0; i < musicArr.length; i++) {
-          let list = document.createElement('li');
-          list.innerText = musicArr[i].song + ' -- ' + musicArr[i].artist
-          document.getElementById('musicList').append(list);
-      }
+  musicArr.forEach(function (element,) {
+    let list = document.createElement('li');
+        list.classList.add('oneMusic'); 
+        list.setAttribute("data-parm", element.ID);
+        list.innerHTML = element.song + "--" + element.artist;
+        document.getElementById('musicList').append(list);
+  });
+      // for (i = 0; i < musicArr.length; i++) {
+      //     let list = document.createElement('li');
+      //     list.classList.add('oneMusic');
+      //     list.setAttribute('data-parm',musicArr[i].ID);
+      //     list.innerText = musicArr[i].song + ' -- ' + musicArr[i].artist
+      //     document.getElementById('musicList').append(list);
+      // }
+// This is the code that allows you to click on the individual li's on the page
+let liArray = document.getElementsByClassName('oneMusic');
+Array.from(liArray).forEach(function (element){
+  element.addEventListener('click', function(){
+    let parm = this.getAttribute('data-parm');
+    localStorage.setItem('parm', parm);
+    let stringMusicArr = JSON.stringify(musicArr);
+    localStorage.setItem('musicArr',stringMusicArr);
+    document.location.href = "index.html#hiddenPage"
+  })
+})
 }
+
+$(document).on("pagebeforeshow", "#hiddenPage", function (event) {   
+  let localParm = localStorage.getItem('parm');
+  let localID = getArray(localParm);
+  musicArr = JSON.parse(localStorage.getItem('musicArr'));  
+  document.getElementById("musicSong").innerHTML = "The Song is: " + musicArr[localID].song;
+  document.getElementById("musicAlbum").innerHTML = "The Album is: " + musicArr[localID ].album;
+  document.getElementById("musicArtist").innerHTML = "The Artist is: " + musicArr[localID ].artist;
+  document.getElementById("musicDate").innerHTML = "Year Released is: " + musicArr[localID].year;
+  document.getElementById("musicGenre").innerHTML = "Genre: " + musicArr[localID].genre;
+  document.getElementById("musicLink").innerHTML = "URL for the Music Video: " + musicArr[localID].link;
+});
 
 document.getElementById('clearMusic').addEventListener('click',clearMusic);
 function clearMusic() {
   document.getElementById('musicList').innerText = '';
 }
 
-
+function getArray(localID) {
+  for (let i = 0; i < musicArr.length; i++) {
+      if (localID === musicArr[i].ID) {
+          return i;
+      }
+  }
+}
 
 
 
