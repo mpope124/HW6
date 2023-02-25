@@ -4,14 +4,30 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="css/themes/jquery.mobile.icons.min.css" /> <!-- Custom JQuery Mobile CSS-->
+    
+
     
     <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css"/>
     <link rel="stylesheet" type="text/css" href="style.css">
+
+    
+
+
     <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
     <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+    
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Carrois+Gothic+SC&display=swap" rel="stylesheet">
+
+    
+
+
+    <link rel="stylesheet" href="css/themes/my-custom-theme.css" /> <!-- Pathway to Custom JQuery Mobile CSS Folder-->
     <title>List your favorite music</title>
 </head>
 <body>
@@ -20,29 +36,32 @@
     <div data-role="page" id="home">
 
         <!-- header --> 
-        <div id="headerHome" data-role="header" data-theme='b'>
+        <div id="headerHome" data-role="header">
+
             <h2>View your favorite music!</h2>
         
-            <div id="navbarHome" data-role="navbar" data-theme='b'>
+            <div id="navbarHome" data-role="navbar">
                 <ul>
                 <li><a href="#song">Write Musics</a></li>
                 <li><a href="#displayMusic">Display Music</a></li>
                 </ul>
             </div><!-- /navbar -->
+
         </div>  
         
         <!-- content -->
-        <div id="homePageContent" data-role="content" data-theme='e'>
+        <div id="homePageContent" data-role="content">
             <!-- Real application function code -->
             <h1>Store and Share Your Favorite Music</h1>
-        <p>Use this page to put your favorite music as well as sharing with your friends to have them put their favorite music</p>
-        <p>Write Musics Page: Type in your favorite music as well as various other details such as the artist, album, genre, etc.</p>
-        <p>Display Music Page: A page where it will list your typed in information about the music you chose. The list will have clickable links.</p>
-        <p>Hidden Page: The page where the clickable list in the Display Music page will take you when clicked. It will list various other details you wrote about the music.</p>
-        <img src="Lamb-Of-God-5.jpg"></div>
-    </div>
+            <p>Use this page to put your favorite music as well as sharing with your friends to have them put their favorite music</p>
+            <p>Write Musics Page: Type in your favorite music as well as various other details such as the artist, album, genre, etc.</p>
+            <p>Display Music Page: A page where it will list your typed in information about the music you chose. The list will have clickable links.</p>
+            <p>Hidden Page: The page where the clickable list in the Display Music page will take you when clicked. It will list various other details you wrote about the music.</p>
+            <img src="Lamb-Of-God-5.jpg">
+        </div>
+
           <!-- notes footer --> 
-          <div data-role="footer" data-theme='b'>
+        <div data-role="footer">
             <h3>Copyright 2023 by Michael Pope and Stephen Orendain</h3>
         </div>
 
@@ -55,7 +74,7 @@
         
         <!-- =================================== -->
         <!-- header --> 
-        <div data-role="header" data-theme='b'>
+        <div data-role="header">
             <h2>Write to us what you like to listen to!</h2>
 
             <div data-role="navbar" data-theme='b'>
@@ -105,7 +124,7 @@
 
         <!-- =================================== -->
         <!-- notes footer --> 
-        <div data-role="footer" data-theme='b'>
+        <div data-role="footer">
             <h3 id="musicNotes">Copyright 2023 by Michael Pope and Stephen Orendain</h3>
         </div>
         
@@ -120,7 +139,7 @@
         
           <!-- =================================== -->
         <!-- header --> 
-        <div data-role="header" data-theme='b'>
+        <div data-role="header">
             <h2>Display your Music</h2>
        
 
@@ -160,7 +179,7 @@
 
            <!-- =================================== -->
         <!-- notes footer --> 
-        <div data-role="footer" data-theme='b'>
+        <div data-role="footer">
             <h3>Copyright 2023 by Michael Pope and Stephen Orendain</h3>
         </div>
         <!-- =================================== -->

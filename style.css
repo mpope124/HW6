@@ -1,9 +1,11 @@
 body {
     margin: 50px;
-    background-color: rgb(38, 161, 0);
     font-family: 'Carrois Gothic SC', sans-serif;
 
 }
+
+
+
 .Center {
     background-color: antiquewhite;
 }
@@ -19,12 +21,9 @@ body {
 }
 
 #storeMusic {
-    background-color: black;
     font-size: 100%;
-    color:white;
-    border-color: black;
     border-radius: 80%;
-    border-width: thick;
+    border-width: medium;
 }
 
 #end {
@@ -44,3 +43,4 @@ body {
 #letLive {
     max-width: 50%;
 }
+
