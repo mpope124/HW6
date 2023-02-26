@@ -1,11 +1,7 @@
 body {
     margin: 50px;
-    font-family: 'Carrois Gothic SC', sans-serif;
 
 }
-
-
-
 .Center {
     background-color: antiquewhite;
 }
@@ -40,6 +36,11 @@ body {
     background-image: url(pexels-photo-4296349.jpeg);  
 }
 
+#hiddenPageContent {
+    text-align: center;
+    color:white;
+    background-image: url(pexels-photo-4296349.jpeg);    
+}
 #letLive {
     max-width: 50%;
 }

@@ -11,9 +11,9 @@ let Music = function (pSong, pAlbum, pArtist, pYear, pGenre, pLink){
 
  musicArr = []; // music and genre get stored here
 
-//musicArr.push(new Music("Umbrella", "Good Girls Gone Bad", "Rihanna", "2008", "Pop", "https://www.youtube.com/watch?v=CvBfHwUxHIk"));
-//musicArr.push(new Music("Single Ladies", "I AM...SASHA FIERCE", "Beyonce", "2008", "Pop", "https://www.youtube.com/watch?v=4m1EFMoRFvY"));
-//musicArr.push(new Music("Rehab","Back To Black", "Amy Winehouse", "2006", "Pop", "https://www.youtube.com/watch?v=KUmZp8pR1uc"));
+musicArr.push(new Music("Umbrella", "Good Girls Gone Bad", "Rihanna", "2008", "Pop", "https://www.youtube.com/watch?v=CvBfHwUxHIk"));
+musicArr.push(new Music("Single Ladies", "I AM...SASHA FIERCE", "Beyonce", "2008", "Pop", "https://www.youtube.com/watch?v=4m1EFMoRFvY"));
+musicArr.push(new Music("Rehab","Back To Black", "Amy Winehouse", "2006", "Pop", "https://www.youtube.com/watch?v=KUmZp8pR1uc"));
 
  function Storedmusic() {
     let song = document.getElementById('newSong').value;

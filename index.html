@@ -17,13 +17,6 @@
 
     <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
     <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
-
-    
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Carrois+Gothic+SC&display=swap" rel="stylesheet">
-
     
 
 
@@ -53,10 +46,18 @@
         <div id="homePageContent" data-role="content">
             <!-- Real application function code -->
             <h1>Store and Share Your Favorite Music</h1>
-            <p>Use this page to put your favorite music as well as sharing with your friends to have them put their favorite music</p>
+
+            <h2>Use this website to store and share your favorite music!</h2>
+           
+            <p>Be sure to share with friends and family! Click the Write Musics button to input your favorite music. You are able to put in as many songs as you would like.</p>
+            <p>Once you are done inputing music, click on the display music button to list out all the music that you, your friends, and your family have inputed.</p>
+            <p>On the display page, you are able to click on the artist and title of the song to view more details of the song.</p>
+
+
+            <!-- <p>Use this page to put your favorite music as well as sharing with your friends to have them put their favorite music</p>
             <p>Write Musics Page: Type in your favorite music as well as various other details such as the artist, album, genre, etc.</p>
             <p>Display Music Page: A page where it will list your typed in information about the music you chose. The list will have clickable links.</p>
-            <p>Hidden Page: The page where the clickable list in the Display Music page will take you when clicked. It will list various other details you wrote about the music.</p>
+            <p>Hidden Page: The page where the clickable list in the Display Music page will take you when clicked. It will list various other details you wrote about the music.</p> -->
             <img src="Lamb-Of-God-5.jpg">
         </div>
 
@@ -90,7 +91,7 @@
         <!-- =================================== -->
         <!-- content -->
         <div data-role="content" data-theme='e' id="background1">
-            <p id="description1">Write to us some music of your choice. It can be anything. The music you submit will be stored.</p>
+            <p id="description1">Below is where you can input your favorite songs along with all of the details for the song.</p>
             <p>Enter a Song: </p>
             <input type="text" id="newSong" placeholder="Enter Your Song Here!"></input>
             <p>Enter The Album: </p>
@@ -157,18 +158,13 @@
         <div id="displayPageContent" data-role="content" data-theme='e'>
           <h1> Below you can list out your music!</h1>
           <p>Show your friends your music taste and allow them to show you theirs.</p>
-<!-- <div id="listMusic1">
-            <li>Umbrella -- Rihanna</li>
-            <li>Single Ladies -- Beyonce</li>
-            <li>Rehab -- Amy Winehouse</li>
-        </div> -->
+          <p>Below your music should be displayed but you are able to clear the list if needed</p>
           <button id="listMusic">Display your favorite songs and genres</button>
 
           <div id="musicList"></div>
 
           <br />
           <button id='clearMusic'>Clear Music</button>
-          <h3>Check out this photo!</h3>
           <img id='letLive' src="Letlive-Gattine3.png"></img>
           <br />
           <p>This is singer Jason Butler from the band LetLive jumping into the crowd to crowdsurf</p>
@@ -202,9 +198,10 @@
     </div><!-- /navbar -->
     </div>
     <!-- content DIV -->
-    <div id="displayPageContent" data-role="content" data-theme='e'>
+    <div id="hiddenPageContent" data-role="content" data-theme='e'>
 
 <!-- Place Content Here  -->
+<p>Below is going to have the information for the song you selected</p>
 <div id="musicDetails">
 <p id="musicSong"></p>
 <p id="musicAlbum"></p>
@@ -214,14 +211,7 @@
 <p id="musicLink"></p>
 
 </div>
-        <!-- <P>Song: Umbrella</P>
-        <P>Album: Good Girl Gone Bad</P>
-        <P>Artist: Rihanna</P>
-        <P>Release Date: 2007</P>
-        <P>Genre: R&BSoul, Dance/Electronix, Pop</P>
-        <a href="https://www.youtube.com/watch?v=CvBfHwUxHIk&ab_channel=RihannaVEVO">Video Link</a> -->
 
-    </div>
 
     <div data-role="footer" data-theme='b'>
         <h3>Copyright 2023 by Michael Pope and Stephen Orendain</h3>
